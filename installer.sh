@@ -30,14 +30,21 @@ git -C ${ZSHPATH} clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 chsh -s /bin/zsh
 
 #INSTALL TMUX PACKAGES
+#Press prefix + I (capital i, as in Install) to fetch the plugin.
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 eval '$INSTALLER tmux'
 
 #INSTALL NEOVIM PACKAGES
 eval '$INSTALLER neovim'
 eval '$INSTALLER ripgrep'
-eval '%INSTALLER xsel'
-eval '%INSTALLER ruby'
-eval '%INSTALLER ccls'
+eval '$INSTALLER xsel'
+eval '$INSTALLER ruby'
+eval '$INSTALLER ccls'
+eval '$INSTALLER npm'
+
+rm ${HOME}/.zshrc
+rm ${HOME}/.tmux.conf
+rm -rf ${HOME}/.config/nvim
 
 ln -s zshrc ${HOME}/.zshrc
 ln -s tmux.conf ${HOME}/.tmux.conf
