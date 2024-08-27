@@ -17,7 +17,7 @@ vim.keymap.set('n', '<leader>s', ':w<CR>')
 vim.keymap.set('n', '<leader>q', ':qa<CR>')
 
 -- Close buffer without killing splits
-vim.keymap.set('n', '<leader>bd', ':bp|bd #')
+vim.keymap.set('n', '<leader>bd', ':bp | bd #<CR>')
 
 -- Zoom splited window
 vim.keymap.set('n', '<leader>zi', '<c-w>|')

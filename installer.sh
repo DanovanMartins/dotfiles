@@ -13,8 +13,14 @@ else
 	INSTALLER="sudo apt install"
 fi
 
+#INSTALL CURL PACKAGE
+eval '$INSTALLER curl'
+
 #INSTALL OH-MY-ZSH PACKAGES
-eval '$INSTALLER zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting'
+eval '$INSTALLER zsh'
+eval '$INSTALLER zsh-completions'
+eval '$INSTALLER zsh-autosuggestions'
+eval '$INSTALLER zsh-syntax-highlighting'
 
 #CREATE OH-MY-ZSH DOTFILE
 curl -L https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
@@ -48,7 +54,7 @@ rm -rf ${HOME}/.config/nvim
 
 ln -s zshrc ${HOME}/.zshrc
 ln -s tmux.conf ${HOME}/.tmux.conf
-ln -s nvim ${HOME}/.config/nvim
+#ln -s nvim ${HOME}/.config/nvim
 
 mkdir -p ${HOME}/.local/share/fonts
 curl -o ${HOME}/.local/share/fonts/DroidSansMNerdFont-Regular.otf -fLO \
