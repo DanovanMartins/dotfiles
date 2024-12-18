@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
   -- commenter
   use ('preservim/nerdcommenter')
 
+  -- float terminal
+  use ('voldikss/vim-floaterm')
+
   -- cmp plugins
   use ('hrsh7th/nvim-cmp')          -- The completion plugin
   use ('hrsh7th/cmp-buffer')        -- buffer completions
